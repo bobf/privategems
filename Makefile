@@ -6,11 +6,11 @@ test:
 
 .PHONY: build
 build:
-	docker build . --tag bobfarrell/privategems
+	docker build . --tag privategems/privategems
 
 .PHONY: push
 push:
-	docker push bobfarrell/privategems
+	docker push privategems/privategems
 
 # Development server
 .PHONY: server

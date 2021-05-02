@@ -18,7 +18,7 @@ docker run \
   --volume /path/to/users.yml:/privategems-users.yml \
   --env SECRET_KEY_BASE=my-secure-cookie-secret \
   --publish 8080:8080 \
-  bobfarrell/privategems
+  privategems/privategems
 ```
 
 You will be able to access the application at http://localhost:8080/
