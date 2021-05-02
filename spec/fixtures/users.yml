@@ -1,0 +1,12 @@
+---
+users:
+- username: alex
+  password: alexiscool
+  role: developer
+- username: chris
+  password: alexsucks
+  role: admin
+- username: jenkins
+  password: iamjenkins
+  role: admin
+  api_key: jenkins-api-key
