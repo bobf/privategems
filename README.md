@@ -2,8 +2,6 @@
 
 _RubyGems_ compatible server for hosting private gems. Based (heavily) on [Geminabox](https://github.com/geminabox/geminabox).
 
-Public gems are proxied automatically via [https://rubygems.org/](https://rubygems.org/).
-
 Browse available private gems in your web browser via the front end (served on the same host/port as the back end server).
 
 ## Running a Server
@@ -23,10 +21,13 @@ docker run \
 
 You will be able to access the application at http://localhost:8080/
 
+It is strongly recommended that you use a web server like [_Nginx_](https://www.nginx.com/) to proxy requests to _Private Gems_. If your server is accessible over the public internet then _SSL_ should be enabled.
+
+#### Environment Variables
+
 * `PRIVATE_GEMS_DATA_PATH` must point to an existing directory with read/write access.
 * `PRIVATE_GEMS_USERS_PATH` must point to a `.yml` file with read/write access. See below for more details on how to create this file.
-
-It is strongly recommended that you use a web server like [_Nginx_](https://www.nginx.com/) to proxy requests to _Private Gems_. If your server is accessible over the public internet then _SSL_ should be enabled.
+* `RUBYGEMS_PROXY` can be set to `true` to fetch unknown gems from https://rubygems.org
 
 ### Other
 

@@ -15,7 +15,6 @@ DATA_PATH = ENV.fetch('PRIVATE_GEMS_DATA_PATH', '/privategems/data')
 
 Geminabox.data = DATA_PATH
 Geminabox.views = ENV.fetch('PRIVATE_GEMS_VIEWS_PATH') if ENV.key?('PRIVATE_GEMS_VIEWS_PATH')
-Geminabox.rubygems_proxy = true
 Geminabox.allow_remote_failure = true
 
 use Rack::Session::Cookie, key: '_session',
